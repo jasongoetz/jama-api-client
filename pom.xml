@@ -66,5 +66,17 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>jama-maven-central-releases</id>
+            <url>http://nexus.jamasoftware.net/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>jama-maven-central-snapshots</id>
+            <url>http://nexus.jamasoftware.net/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
