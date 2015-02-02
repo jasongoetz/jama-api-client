@@ -12,8 +12,20 @@ public class UsersClient extends AbstractResourceClient {
         super(jamaURL, username, password);
     }
 
-    public PageResults<User> getUsers(Integer startAt, Integer maxResults) {
+    public PageResults<User> getUsers(String username, String email, String firstName, String lastName, Integer startAt, Integer maxResults) {
         MultivaluedMapImpl params = new MultivaluedMapImpl();
+        if (username != null) {
+            params.add("username", username);
+        }
+        if (email != null) {
+            params.add("email", email);
+        }
+        if (firstName != null) {
+            params.add("firstName", firstName);
+        }
+        if (lastName != null) {
+            params.add("lastName", lastName);
+        }
         if (startAt != null) {
             params.add("startAt", startAt);
         }
